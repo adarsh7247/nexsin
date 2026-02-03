@@ -6,8 +6,7 @@ import ButtonBase from "@mui/material/ButtonBase";
 import { motion, AnimatePresence } from "framer-motion";
 import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
-import ProfileCardModal from "@/components/ProfileCard";
-import ProfilePage from "../ProfilePage";
+import ProfilePage from "@/components/ProfilePage";
 
 export default function UploadAvatars({
   avatarSrc,
@@ -103,12 +102,14 @@ export default function UploadAvatars({
                     <li
                       className="py-3 hover:bg-gray-800 cursor-pointer"
                       onClick={() => {
-                        setOpen(false);
                         router.push("/contactus");
+
+                        setOpen(false);
                       }}
                     >
                       Contact Us
                     </li>
+
                     <li className="py-3 hover:bg-gray-800 cursor-pointer">
                       Order Status
                     </li>
@@ -119,7 +120,7 @@ export default function UploadAvatars({
                       className="py-3 hover:bg-gray-800 cursor-pointer"
                       onClick={() => {
                         setOpen(false);
-                        router.push("/register");
+                        router.push("/serviceproviderauthentication/register");
                       }}
                     >
                       Register as professional

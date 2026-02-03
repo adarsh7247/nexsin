@@ -4,6 +4,7 @@ import React from "react";
 import CardNav, { CardNavItem } from "@/components/CardNav";
 import { Button } from "@/components/ui/button";
 import Card from "@mui/material/Card";
+
 import CardContent from "@mui/material/CardContent";
 import {
   Car,
@@ -88,8 +89,8 @@ const items: CardNavItem[] = [
     bgColor: "#0D0716",
     textColor: "#fff",
     links: [
-      { label: "Company", href: "/about", ariaLabel: "About Company" },
-      { label: "Careers", href: "/careers", ariaLabel: "About Careers" },
+      { label: "Company", href: "/information/about", ariaLabel: "About Company" },
+      { label: "Careers", href: "/information/careers", ariaLabel: "About Careers" },
     ],
   },
   {
@@ -250,6 +251,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+   
+      
     </div>
   );
 }

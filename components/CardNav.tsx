@@ -1,10 +1,13 @@
 "use client";
 
+
 import React, { useLayoutEffect, useRef, useState, useCallback } from "react";
 import { gsap } from "gsap";
 import { GoArrowUpRight } from "react-icons/go";
 import "./CardNav.css";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+
 
 export type CardNavLink = {
   label: string;
@@ -233,18 +236,23 @@ const CardNav: React.FC<CardNavProps> = ({
               <div className="nav-card-label">{item.label}</div>
               <div className="nav-card-links">
                 {item.links?.map((lnk, i) => (
-                  <a
+                  <Link
                     key={i}
-                    className="nav-card-link"
                     href={lnk.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    className="nav-card-link"
+                    onClick={() => {
+                      setIsHamburgerOpen(false);
+                      setIsExpanded(false);
+                      tlRef.current?.reverse();
+                    }}
                   >
                     <GoArrowUpRight />
                     {lnk.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
+
+
             </div>
           ))}
         </div>

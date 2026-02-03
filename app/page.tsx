@@ -110,8 +110,8 @@ export default function HomePage() {
       bgColor: "#0D0716",
       textColor: "#fff",
       links: [
-        { label: "Company", href: "/about", ariaLabel: "About Company" },
-        { label: "Careers", href: "/careers", ariaLabel: "About Careers" },
+        { label: "Company", href: "/information/about", ariaLabel: "About Company" },
+        { label: "Careers", href: "/information/careers", ariaLabel: "About Careers" },
       ],
     },
     {

@@ -41,7 +41,7 @@ export default function RegisterPage() {
       setStep("success");
 
       setTimeout(() => {
-        router.push("/registerservice");
+        router.push("/serviceproviderauthentication/registerservice");
       }, 2000);
     }, 1200);
   };
